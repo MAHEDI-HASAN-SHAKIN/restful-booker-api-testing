@@ -1,0 +1,408 @@
+{
+  "info": {
+    "_postman_id": "96faeae7-a91f-47b5-ab27-b7b38206c39e",
+    "name": "Restful Booker API Testing",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "56912183",
+    "_collection_link": "https://go.postman.co/collection/56912183-96faeae7-a91f-47b5-ab27-b7b38206c39e?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "New Request",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              "\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 201\", function () {\r",
+              "    pm.response.to.have.status(201);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Cookie",
+            "value": "token={{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"firstname\": \"Mahadi\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/booking/{{bookingId}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "booking",
+            "{{bookingId}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "post",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              "\r",
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 201\", function () {\r",
+              "    pm.response.to.have.status(201);\r",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "disabled": false
+          },
+          {
+            "key": "Cookie",
+            "value": "token={{token}}",
+            "disabled": false
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"firstname\": \"Mahadi\",\r\n \"lastname\": \"Hasan\",\r\n \"totalprice\": 500,\r\n \"depositpaid\": true, \r\n\"bookingdates\": \r\n{ \"checkin\": \"2026-09-01\", \r\n\"checkout\": \"2026-09-05\" }\r\n\"abc\": \"testing\" \r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "text"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/bookings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "bookings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "{{baseUrl}}/bookings",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              "\r",
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 201\", function () {\r",
+              "    pm.response.to.have.status(201);\r",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "disabled": false
+          },
+          {
+            "key": "Cookie",
+            "value": "token={{token}}",
+            "disabled": false
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"firstname\": \"Mahadi\",\r\n \"lastname\": \"Hasan\",\r\n \"totalprice\": 500,\r\n \"depositpaid\": true, \r\n\"bookingdates\": \r\n{ \"checkin\": \"2026-09-01\", \r\n\"checkout\": \"2026-09-05\" }\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "text"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/bookings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "bookings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "{{baseUrl}}/bookings",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              "\r",
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 201\", function () {\r",
+              "    pm.response.to.have.status(201);\r",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "disabled": false
+          },
+          {
+            "key": "Cookie",
+            "value": "token={{token}}",
+            "disabled": false
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"firstname\": \"Mahadi\",\r\n \"lastname\": \"Hasan\",\r\n \"totalprice\": 500,\r\n \"depositpaid\": true, \r\n\"bookingdates\": \r\n{  } \r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "text"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/bookings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "bookings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Restful Booker API Testing",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              "\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 201\", function () {\r",
+              "    pm.response.to.have.status(201);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Cookie",
+            "value": "token={{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/booking/12abc",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "booking",
+            "12abc"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/ping",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "ping"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "password",
+        "value": "{{auth_password_1abp}}",
+        "type": "string"
+      },
+      {
+        "key": "username",
+        "value": "admin",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "auth_password_1abp",
+      "secret": true
+    }
+  ]
+}
